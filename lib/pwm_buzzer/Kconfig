@@ -1,0 +1,16 @@
+# Copyright (C) 2024 Golioth, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+config PWM_BUZZER
+	bool "PWM buzzer library"
+    depends on PWM
+	default n
+	help
+	  This option enables the PWM buzzer library.
+
+config PWM_BUZZER_SONGS
+	bool "PWM buzzer songs library"
+	depends on PWM_BUZZER
+	default n
+	help
+	  This option includes a library of songs which can be played using the PWM buzzer.
